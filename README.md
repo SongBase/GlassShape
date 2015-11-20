@@ -1,9 +1,5 @@
 # GlassShape
-Glass Shutters for Sash Windows
-
 **_[Website](http://glassshape.uk/)_**
-
-Application for generating CAD scripts for drawing Glass Shutters for sash windows.
 
 Glass Shutters may be used as an alternative to double glazing where it is required to preserve the appearance of your traditional sash windows.
 
