@@ -34,7 +34,7 @@ import javax.swing.plaf.basic.*;
 public class GlassShuttersNTR extends JDialog
 {
 	/*
-	 * version 2.1.1
+	 * version 2.1.2
 	 *
 	 */
 
@@ -103,7 +103,7 @@ public class GlassShuttersNTR extends JDialog
 
    private JDialog frame = GlassShuttersNTR.this;
 
-   private static String title = "Glass Shutters 2.1.1";
+   private static String title = "Glass Shutters 2.1.2";
 
    public GlassShuttersNTR()
    {
@@ -622,7 +622,7 @@ public class GlassShuttersNTR extends JDialog
             aboutFrame.setVisible(true);
 
             output.append("Glass Shutters - Application for creating CAD scripts for drawing \n" +
-                          "Glass Shutters version 2.1.1  Copyright (C) 2012 - 2015  Donald G Gray \n" +
+                          "Glass Shutters version 2.1.2  Copyright (C) 2012 - 2016  Donald G Gray \n" +
                           "\n" +
                           "http://gray10.com/ \n" +
                           "\n" +
@@ -664,8 +664,23 @@ public class GlassShuttersNTR extends JDialog
          console.init();
          console.frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
-         System.out.println("Glass Shutters version 2.1.1");
+         System.out.println("Glass Shutters version 2.1.2");
          System.out.println("Hello " + userName);
+
+         File file = new File(System.getProperty("user.home"),"Documents");
+         if (! file.exists()) file.mkdir();
+
+         file = new File(new File(System.getProperty("user.home"),"Documents"),"Glass Shutters");
+         if (! file.exists()) file.mkdir();
+
+         file = new File(new File(new File(System.getProperty("user.home"),"Documents"),"Glass Shutters"),"scr");
+         if (! file.exists()) file.mkdir();
+
+         file = new File(new File(new File(System.getProperty("user.home"),"Documents"),"Glass Shutters"),"dwg");
+         if (! file.exists()) file.mkdir();
+
+         file = new File(new File(new File(System.getProperty("user.home"),"Documents"),"Glass Shutters"),"audit");
+         if (! file.exists()) file.mkdir();
 
          GlassShuttersNTR template = new GlassShuttersNTR();
          template.setVisible(true);
