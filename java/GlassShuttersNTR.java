@@ -1,6 +1,6 @@
 /*
  * GlassShuttersNTR.java - Script Generator for Glass Shutters to NT specifications, all corners rounded.
- * Copyright (C) 2012, 2013, 2014, 2015  Donald G Gray
+ * Copyright (C) 2012, 2013, 2014, 2015, 2016  Donald G Gray
  *
  * http://gray10.com/
  *
@@ -34,7 +34,7 @@ import javax.swing.plaf.basic.*;
 public class GlassShuttersNTR extends JDialog
 {
 	/*
-	 * version 2.1.2
+	 * version 2.1.3
 	 *
 	 */
 
@@ -57,6 +57,8 @@ public class GlassShuttersNTR extends JDialog
    private static double innerlh2 = 0.0;
    private static double innerlh3 = 0.0;
    private static double lh2;
+   private static double lh2_1;
+   private static double lh2_2;
    private static double rh = 0.0;
    private static double innerrh1 = 0.0;
    private static double innerrh2 = 0.0;
@@ -67,6 +69,8 @@ public class GlassShuttersNTR extends JDialog
    private static double innerradius;
    private static double inset;
    private static double rh2;
+   private static double rh2_1;
+   private static double rh2_2;
    private static double l;
    private static double m;
    private static double l2;
@@ -103,7 +107,7 @@ public class GlassShuttersNTR extends JDialog
 
    private JDialog frame = GlassShuttersNTR.this;
 
-   private static String title = "Glass Shutters 2.1.2";
+   private static String title = "Glass Shutters 2.1.3";
 
    public GlassShuttersNTR()
    {
@@ -173,6 +177,7 @@ public class GlassShuttersNTR extends JDialog
 		styleComboBox.addItem("Imperial");
 		styleComboBox.addItem("Imperial right bi-folding");
 		styleComboBox.addItem("Regent");
+		styleComboBox.addItem("Regent (4 hinges)");
 		styleComboBox.addItem("Viceroy");
 		styleComboBox.addItem("Roman");
 		styleComboBox.addItem("Roman (4 hinges)");
@@ -622,7 +627,7 @@ public class GlassShuttersNTR extends JDialog
             aboutFrame.setVisible(true);
 
             output.append("Glass Shutters - Application for creating CAD scripts for drawing \n" +
-                          "Glass Shutters version 2.1.2  Copyright (C) 2012 - 2016  Donald G Gray \n" +
+                          "Glass Shutters version 2.1.3  Copyright (C) 2012 - 2016  Donald G Gray \n" +
                           "\n" +
                           "http://gray10.com/ \n" +
                           "\n" +
@@ -664,7 +669,7 @@ public class GlassShuttersNTR extends JDialog
          console.init();
          console.frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
-         System.out.println("Glass Shutters version 2.1.2");
+         System.out.println("Glass Shutters version 2.1.3");
          System.out.println("Hello " + userName);
 
          File file = new File(System.getProperty("user.home"),"Documents");
@@ -709,6 +714,7 @@ public class GlassShuttersNTR extends JDialog
 			else if (s.equals("Imperial")) styleTF();
 			else if (s.equals("Imperial right bi-folding")) styleTRF();
 			else if (s.equals("Regent"))   styleQ();
+			else if (s.equals("Regent (4 hinges)"))   styleQ4();
 			else if (s.equals("Viceroy"))  styleQF();
 			else if (s.equals("Roman"))    styleRoman();
 			else if (s.equals("Roman (4 hinges)"))    styleRoman4();
@@ -2687,6 +2693,324 @@ public class GlassShuttersNTR extends JDialog
             // write audit file
 
             File auditFile = new File(userHome + "\\Documents\\Glass Shutters\\audit\\Regent-" + today + "-" + w + ".txt");
+            FileWriter auditFileWriter = new FileWriter(auditFile);
+            BufferedWriter auditBufferedWriter = new BufferedWriter(auditFileWriter);
+
+            writeAudit(auditFile, auditBufferedWriter);
+
+            auditBufferedWriter.close();
+            auditFileWriter.close();
+
+            // end write audit file
+         }
+	}
+
+	private static void styleQ4() throws Exception
+	{
+
+		   FormStyleQ4 template = new FormStyleQ4();
+		   template.setVisible(true);
+
+         a = template.getA();
+         b = template.getB();
+         c = template.getC();
+         d = template.getD();
+         e = template.getE();
+         f = template.getF();
+         g = template.getG();
+         h = template.getH();
+         i = template.getI();
+         j = template.getJ();
+         //k = template.getK();
+         //lh = template.getLH();
+         //rh = template.getRH();
+
+         innerlh1 = template.getLH1();
+         innerlh2 = template.getLH2();
+         //innerlh3 = template.getLH3();
+         innerrh1 = template.getRH1();
+         innerrh2 = template.getRH2();
+         //innerrh3 = template.getRH3();
+
+         if ((innerlh1 > innerlh2) || (innerrh1 > innerrh2))
+         {
+				Messages.warningMessage(title, "LH1 - LH2 and RH1 - RH2 must be in ascending order.");
+				System.exit(0);
+			}
+
+         template.dispose();
+
+         //l2 = a + (g - a)*(c - lh)/(c + e);
+         //m2 = b + (h - b)*(d - rh)/(d + f);
+
+         //l2 = a + (g - a)*(c - lh)/(c + e);
+         l2_1 = a + (g - a)*(c - innerlh1)/(c + e);
+         l2_2 = a + (g - a)*(c - innerlh2)/(c + e);
+         //l2_3 = a + (g - a)*(c - innerlh3)/(c + e);
+         //m2 = b + (h - b)*(d - rh)/(d + f);
+         m2_1 = b + (h - b)*(d - innerrh1)/(d + f);
+         m2_2 = b + (h - b)*(d - innerrh2)/(d + f);
+         //m2_3 = b + (h - b)*(d - innerrh3)/(d + f);
+
+         n = e + (f - e)*(g - i)/(g + h);
+         o = f + (e - f)*(h - j)/(h + g);
+
+         p = c + (d - c)*a/(a + b);
+         q = e + (f - e)*g/(g + h);
+
+         r = c + (d - c)*(a - i)/(a + b);
+         t = d + (c - d)*(b - j)/(b + a);
+
+         //lh2 = lh + (rh - lh)*(l2 - i)/(l2 + m2);
+         //rh2 = rh + (lh - rh)*(m2 - j)/(m2 + l2);
+
+         lh2_1 = innerlh1 + (innerrh1 - innerlh1)*(l2_1 - i)/(l2_1 + m2_1);
+         lh2_2 = innerlh2 + (innerrh2 - innerlh2)*(l2_2 - i)/(l2_2 + m2_2);
+         rh2_1 = innerrh1 + (innerlh1 - innerrh1)*(m2_1 - j)/(m2_1 + l2_1);
+         rh2_2 = innerrh2 + (innerlh2 - innerrh2)*(m2_2 - j)/(m2_2 + l2_2);
+
+         if ((Math.abs(a - g) > 6.0) || (Math.abs(b - h) > 6.0))
+         {
+				Messages.warningMessage(title, "More than 6 mm out of plumb.");
+				System.exit(0);
+			}
+
+         JFileChooser chooser = new JFileChooser(new File(new File(new File(System.getProperty("user.home"),"Documents"),"Glass Shutters"),"scr"));
+         chooser.setPreferredSize(new Dimension(600,300));
+
+         chooser.setSelectedFile(new File("Regent4-" + today + "-" + w + ".scr"));
+         chooser.setDialogTitle("Quad4 for " + w);
+
+         int result = chooser.showDialog(null, "Save");
+         if (result == JFileChooser.APPROVE_OPTION)
+         {
+            File file = chooser.getSelectedFile();
+
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+            // begin panel 1 (left)
+
+            xoff = -150.0;
+            yoff = 0.0;
+
+            if ( a > g)
+            {
+					notchB = 2.0;
+					notchT = 2.0 + a - g;
+					//notchM = notchB + (notchT - notchB)*(e + lh)/(e + c);
+					notchM1 = notchB + (notchT - notchB)*(e + innerlh1)/(e + c);
+					notchM2 = notchB + (notchT - notchB)*(e + innerlh2)/(e + c);
+					//notchM3 = notchB + (notchT - notchB)*(e + innerlh3)/(e + c);
+				}
+				else
+				{
+					notchT = 2.0;
+					notchB = 2.0 + g - a;
+					//notchM = notchT + (notchB - notchT)*(c - lh)/(c + e);
+					notchM1 = notchT + (notchB - notchT)*(c - innerlh1)/(c + e);
+					notchM2 = notchT + (notchB - notchT)*(c - innerlh2)/(c + e);
+					//notchM3 = notchT + (notchB - notchT)*(c - innerlh3)/(c + e);
+				}
+
+            cornerNotchBL(bufferedWriter, -g + 3.0 + xoff, -e + 3.0 + yoff, notchB);
+            //leftNotch(bufferedWriter, -l2 + 3.0 + xoff, lh + yoff, notchM, 29.0);
+            leftNotch(bufferedWriter, -l2_1 + 3.0 + xoff, innerlh1 + yoff, notchM1, 29.0);
+            leftNotch(bufferedWriter, -l2_2 + 3.0 + xoff, innerlh2 + yoff, notchM2, 29.0);
+            cornerNotchTL(bufferedWriter, -a + 3.0 + xoff, c - 3.0 + yoff, notchT);
+            cornerTR(bufferedWriter, -i - 1.5 + xoff, r - 3.0 + yoff);
+            cornerBR(bufferedWriter, -i - 1.5 + xoff, -n + 3.0 + yoff);
+            bufferedWriter.write("l cl");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-g + 3.0 + notchB + 29.0 + xoff, -e + 3.0 + 5.0 + 14.5 + yoff) + " d 14");
+            bufferedWriter.newLine();
+
+            //bufferedWriter.write("c " + point(-l2 + 3.0 + notchM + 29.0 + xoff, lh + yoff) + " d 14");
+            //bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(-l2_1 + 3.0 + notchM1 + 29.0 + xoff, innerlh1 + yoff) + " d 14");
+            bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(-l2_2 + 3.0 + notchM2 + 29.0 + xoff, innerlh2 + yoff) + " d 14");
+            bufferedWriter.newLine();
+            //bufferedWriter.write("c " + point(-l2_3 + 3.0 + notchM3 + 29.0 + xoff, innerlh3 + yoff) + " d 14");
+            //bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-a + 3.0 + notchT + 29.0 + xoff, c - 3.0 - 5.0 - 14.5 + yoff) + " d 14");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-i - 1.5 - 16.0 + xoff, r - 3.0 - 5.0 - 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            //bufferedWriter.write("c " + point(-i - 1.5 - 16.0 + xoff, lh2 + yoff) + " d 13");
+            //bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-i - 1.5 - 16.0 + xoff, lh2_1 + yoff) + " d 13");
+            bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(-i - 1.5 - 16.0 + xoff, lh2_2 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-i - 1.5 - 16.0 + xoff, -n + 3.0 + 5.0 + 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            // end panel 1
+
+            // begin panel 2 (centre left)
+
+            xoff = -50.0;
+            yoff = 0.0;
+
+            cornerBL(bufferedWriter, -i + 1.5 + xoff, -n + 3.0 + yoff);
+            cornerTL(bufferedWriter, -i + 1.5 + xoff, r - 3.0 + yoff);
+            cornerTR(bufferedWriter, 0.0 - 1.5 + xoff, p - 3.0 + yoff);
+            cornerBR(bufferedWriter, 0.0 - 1.5 + xoff, -q + 3.0 + yoff);
+            // bottomNotch(bufferedWriter, 0.0 - 1.5 - 50.0 + xoff, -q + 3.0 + yoff, 2.0, 40.0);
+            bufferedWriter.write("l cl");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-i + 1.5 + 16.0 + xoff, r - 3.0 - 5.0 - 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            //bufferedWriter.write("c " + point(-i + 1.5 + 16.0 + xoff, lh2 + yoff) + " d 13");
+            //bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-i + 1.5 + 16.0 + xoff, lh2_1 + yoff) + " d 13");
+            bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(-i + 1.5 + 16.0 + xoff, lh2_2 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(-i + 1.5 + 16.0 + xoff, -n + 3.0 + 5.0 + 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(0.0 - 1.5 - 30.0 + xoff, -q + 3.0 + 16.0 + yoff) + " d 7");
+            bufferedWriter.newLine();
+
+            // end panel 2
+
+            // start panel 3 (centre right)
+
+            xoff = 50.0;
+            yoff = 0.0;
+
+            cornerBL(bufferedWriter, 0.0 + 1.5 + xoff, -q + 3.0 + yoff);
+            cornerTL(bufferedWriter, 0.0 + 1.5 + xoff, p - 3.0 + yoff);
+            cornerTR(bufferedWriter, j - 1.5 + xoff, t - 3.0 + yoff);
+            cornerBR(bufferedWriter, j - 1.5 + xoff, -o + 3.0 + yoff);
+            // bottomNotch(bufferedWriter, 0.0 + 1.5 + 50.0 + xoff, -q + 3.0 + yoff, 2.0, 40.0);
+            bufferedWriter.write("l cl");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(j - 1.5 - 16.0 + xoff, t - 3.0 - 5.0 - 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            //bufferedWriter.write("c " + point(j - 1.5 - 16.0 + xoff, rh2 + yoff) + " d 13");
+            //bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(j - 1.5 - 16.0 + xoff, rh2_1 + yoff) + " d 13");
+            bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(j - 1.5 - 16.0 + xoff, rh2_2 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(j - 1.5 - 16.0 + xoff, -o + 3.0 + 5.0 + 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(0.0 + 1.5 + 30.0 + xoff, -q + 3.0 + 16.0 + yoff) + " d 7");
+            bufferedWriter.newLine();
+
+            // end panel 3
+
+            // begin panel 4 (right)
+
+            xoff = 150.0;
+            yoff = 0.0;
+
+            if ( b > h)
+            {
+					notchB = 2.0;
+					notchT = 2.0 + b - h;
+					//notchM = notchB + (notchT - notchB)*(f + rh)/(f + d);
+					notchM1 = notchB + (notchT - notchB)*(f + innerrh1)/(f + d);
+					notchM2 = notchB + (notchT - notchB)*(f + innerrh2)/(f + d);
+					//notchM3 = notchB + (notchT - notchB)*(f + innerrh3)/(f + d);
+				}
+				else
+				{
+					notchT = 2.0;
+					notchB = 2.0 + h - b;
+					//notchM = notchT + (notchB - notchT)*(d - rh)/(d + f);
+					notchM1 = notchT + (notchB - notchT)*(d - innerrh1)/(d + f);
+					notchM2 = notchT + (notchB - notchT)*(d - innerrh2)/(d + f);
+					//notchM3 = notchT + (notchB - notchT)*(d - innerrh3)/(d + f);
+				}
+
+            cornerBL(bufferedWriter, j + 1.5 + xoff, -o + 3.0 + yoff);
+            cornerTL(bufferedWriter, j + 1.5 + xoff, t - 3.0 + yoff);
+            cornerNotchTR(bufferedWriter, b - 3.0 + xoff, d - 3.0 + yoff, notchT);
+            //rightNotch(bufferedWriter, m2 - 3.0 + xoff, rh + yoff, notchM, 29.0);
+            rightNotch(bufferedWriter, m2_2 - 3.0 + xoff, innerrh2 + yoff, notchM2, 29.0);
+            rightNotch(bufferedWriter, m2_1 - 3.0 + xoff, innerrh1 + yoff, notchM1, 29.0);
+            cornerNotchBR(bufferedWriter, h - 3.0 + xoff, -f + 3.0 + yoff, notchB);
+            bufferedWriter.write("l cl");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(b - 3.0 - notchT - 29.0 + xoff, d - 3.0 - 5.0 - 14.5 + yoff) + " d 14");
+            bufferedWriter.newLine();
+
+            //bufferedWriter.write("c " + point(m2 - 3.0 - notchM - 29.0 + xoff, rh + yoff) + " d 14");
+            //bufferedWriter.newLine();
+            //bufferedWriter.write("c " + point(m2_3 - 3.0 - notchM3 - 29.0 + xoff, innerrh3 + yoff) + " d 14");
+            //bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(m2_2 - 3.0 - notchM2 - 29.0 + xoff, innerrh2 + yoff) + " d 14");
+            bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(m2_1 - 3.0 - notchM1 - 29.0 + xoff, innerrh1 + yoff) + " d 14");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(h - 3.0 - notchB - 29.0 + xoff, -f + 3.0 + 5.0 + 14.5 + yoff) + " d 14");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(j + 1.5 + 16.0 + xoff, t - 3.0 - 5.0 - 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            //bufferedWriter.write("c " + point(j + 1.5 + 16.0 + xoff, rh2 + yoff) + " d 13");
+            //bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(j + 1.5 + 16.0 + xoff, rh2_1 + yoff) + " d 13");
+            bufferedWriter.newLine();
+            bufferedWriter.write("c " + point(j + 1.5 + 16.0 + xoff, rh2_2 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("c " + point(j + 1.5 + 16.0 + xoff, -o + 3.0 + 5.0 + 14.5 + yoff) + " d 13");
+            bufferedWriter.newLine();
+
+            // end panel 4
+
+            // flip
+
+            bufferedWriter.write("flip all");
+            bufferedWriter.newLine();
+            bufferedWriter.newLine();
+            bufferedWriter.write("0,-1000 0,1000");
+            bufferedWriter.newLine();
+
+            // end flip
+
+            // save
+
+            bufferedWriter.write("saveas");
+            bufferedWriter.newLine();
+            bufferedWriter.write("R27");
+            bufferedWriter.newLine();
+            bufferedWriter.write(userHome + "\\Documents\\Glass Shutters\\dwg\\Regent4-" + today + "-" + w);
+            bufferedWriter.newLine();
+
+            // end save
+
+            bufferedWriter.close();
+            fileWriter.close();
+            Messages.plainMessage(title, "Script saved to: " + file.getPath());
+
+            // write audit file
+
+            File auditFile = new File(userHome + "\\Documents\\Glass Shutters\\audit\\Regent4-" + today + "-" + w + ".txt");
             FileWriter auditFileWriter = new FileWriter(auditFile);
             BufferedWriter auditBufferedWriter = new BufferedWriter(auditFileWriter);
 
