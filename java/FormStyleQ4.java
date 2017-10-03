@@ -2,7 +2,7 @@
  * FormStyleQ4.java - Script Generator for Glass Shutters to NT specifications, all corners rounded.
  * Copyright (C) 2012, 2013, 2014, 2015, 2016  Donald G Gray
  *
- * http://gray10.com/
+ * http://glass.gray10.com/
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ import java.text.*;
 public class FormStyleQ4 extends JDialog
 {
 	/*
-	 * version 2.1.3
+	 * version 2.2.0
 	 *
 	 */
 
@@ -132,7 +132,7 @@ public class FormStyleQ4 extends JDialog
 
       JLabel kLabel = new JLabel("K (top flap)");
       kLabel.setBounds(25,320,175,30);
-      contentPane.add(kLabel);
+      //contentPane.add(kLabel);
       kField.setBounds(200,320,65,30);
       //contentPane.add(kField);
 

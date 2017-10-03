@@ -2,7 +2,7 @@
  * FormStyleTR.java - Script Generator for Glass Shutters to NT specifications, all corners rounded.
  * Copyright (C) 2012, 2013, 2014, 2015  Donald G Gray
  *
- * http://gray10.com/
+ * http://glass.gray10.com/
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

@@ -2,7 +2,7 @@
  * FormStyleSR.java - Script Generator for Glass Shutters to NT specifications, all corners rounded.
  * Copyright (C) 2012, 2013, 2014, 2015  Donald G Gray
  *
- * http://gray10.com/
+ * http://glass.gray10.com/
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ import java.text.*;
 public class FormStyleSR extends JDialog
 {
 	/*
-	 * version 1.0.22
+	 * version 2.0.0
 	 *
 	 */
 
@@ -51,7 +51,7 @@ public class FormStyleSR extends JDialog
 
    private JDialog frame = FormStyleSR.this;
 
-   private static String title = "Standard hinged right (inside view)";
+   private static String title = "Standard hinged on right (inside view)";
 
    public FormStyleSR()
    {
@@ -114,25 +114,25 @@ public class FormStyleSR extends JDialog
 
       JLabel iLabel = new JLabel("I (left glazing bar)");
       iLabel.setBounds(25,260,175,30);
-      contentPane.add(iLabel);
+      //contentPane.add(iLabel);
       iField.setBounds(200,260,65,30);
       //contentPane.add(iField);
 
       JLabel jLabel = new JLabel("J (right glazing bar)");
       jLabel.setBounds(25,290,175,30);
-      contentPane.add(jLabel);
+      //contentPane.add(jLabel);
       jField.setBounds(200,290,65,30);
       //contentPane.add(jField);
 
       JLabel kLabel = new JLabel("K (top flap)");
       kLabel.setBounds(25,320,175,30);
-      contentPane.add(kLabel);
+      //contentPane.add(kLabel);
       kField.setBounds(200,320,65,30);
       //contentPane.add(kField);
 
       JLabel lhLabel = new JLabel("LH (left hinge)");
       lhLabel.setBounds(25,350,175,30);
-      contentPane.add(lhLabel);
+      //contentPane.add(lhLabel);
       lhField.setBounds(200,350,65,30);
       //contentPane.add(lhField);
 
@@ -193,25 +193,25 @@ public class FormStyleSR extends JDialog
       return Double.parseDouble(hField.getText());
    }
 
-   public double getI()
-   {
-      return Double.parseDouble(iField.getText());
-   }
+   //public double getI()
+   //{
+   //   return Double.parseDouble(iField.getText());
+   //}
 
-   public double getJ()
-   {
-      return Double.parseDouble(jField.getText());
-   }
+   //public double getJ()
+   //{
+   //   return Double.parseDouble(jField.getText());
+   //}
 
-   public double getK()
-   {
-      return Double.parseDouble(kField.getText());
-   }
+   //public double getK()
+   //{
+   //   return Double.parseDouble(kField.getText());
+   //}
 
-   public double getLH()
-   {
-      return Double.parseDouble(lhField.getText());
-   }
+   //public double getLH()
+   //{
+   //   return Double.parseDouble(lhField.getText());
+   //}
 
    public double getRH()
    {

@@ -2,7 +2,7 @@
  * GlassShuttersNTR.java - Script Generator for Glass Shutters to NT specifications, all corners rounded.
  * Copyright (C) 2012, 2013, 2014, 2015, 2016, 2017  Donald G Gray
  *
- * http://gray10.com/
+ * http://glass.gray10.com/
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,7 +34,7 @@ import javax.swing.plaf.basic.*;
 public class GlassShuttersNTR extends JDialog
 {
 	/*
-	 * version 2.1.5
+	 * version 3.2.1
 	 *
 	 */
 
@@ -107,7 +107,7 @@ public class GlassShuttersNTR extends JDialog
 
    private JDialog frame = GlassShuttersNTR.this;
 
-   private static String title = "Glass Shutters 2.1.5";
+   private static String title = "Glass Shutters 3.2.1";
 
    public GlassShuttersNTR()
    {
@@ -165,6 +165,14 @@ public class GlassShuttersNTR extends JDialog
       sLabel.setBounds(25,80,75,30);
       contentPane.add(sLabel);
 
+        styleComboBox.addItem(null);
+		styleComboBox.addItem("New Standard Left");
+		styleComboBox.addItem("New Standard Right");
+		styleComboBox.addItem("New Monarch");
+		styleComboBox.addItem("New Majestic Left");
+		styleComboBox.addItem("New Majestic Right");
+		styleComboBox.addItem("New Regent (3 hinges)");
+		styleComboBox.addItem("New Regent (4 hinges)");
 		styleComboBox.addItem(null);
 		styleComboBox.addItem("Standard hinged left");
 		styleComboBox.addItem("Standard hinged right");
@@ -173,7 +181,6 @@ public class GlassShuttersNTR extends JDialog
 		styleComboBox.addItem("Monarch");
 		styleComboBox.addItem("Regal");
 		styleComboBox.addItem("Majestic");
-		styleComboBox.addItem("New Majestic");
 		styleComboBox.addItem("New Majestic Special");
 		styleComboBox.addItem("Majestic right bi-folding");
 		styleComboBox.addItem("Imperial");
@@ -629,9 +636,9 @@ public class GlassShuttersNTR extends JDialog
             aboutFrame.setVisible(true);
 
             output.append("Glass Shutters - Application for creating CAD scripts for drawing \n" +
-                          "Glass Shutters version 2.1.5  Copyright (C) 2012 - 2017  Donald G Gray \n" +
+                          "Glass Shutters version 3.2.1  Copyright (C) 2012 - 2017  Donald G Gray \n" +
                           "\n" +
-                          "http://gray10.com/ \n" +
+                          "http://glass.gray10.com/ \n" +
                           "\n" +
                           "This program is free software: you can redistribute it and/or modify \n" +
                           "it under the terms of the GNU General Public License as published by \n" +
@@ -671,7 +678,7 @@ public class GlassShuttersNTR extends JDialog
          console.init();
          console.frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
-         System.out.println("Glass Shutters version 2.1.5");
+         System.out.println("Glass Shutters version 3.2.1");
          System.out.println("Hello " + userName);
 
          File file = new File(System.getProperty("user.home"),"Documents");
@@ -707,17 +714,24 @@ public class GlassShuttersNTR extends JDialog
 
 			if      (s.equals("Standard hinged left"))   styleS();
 			else if (s.equals("Standard hinged right"))  styleSR();
+			else if (s.equals("New Standard Left"))  NewStandardLeft.run(w,s);
+			else if (s.equals("New Standard Right"))  NewStandardRight.run(w,s);
 			else if (s.equals("Sterling hinged left"))   styleSF();
 			else if (s.equals("Sterling hinged right"))  styleSRF();
 			else if (s.equals("Monarch"))  styleD();
+			else if (s.equals("New Monarch"))  NewMonarch.run(w,s);
 			else if (s.equals("Regal"))    styleDF();
 			else if (s.equals("Majestic")) styleT();
-			else if (s.equals("New Majestic")) styleNewT();
+			//else if (s.equals("New Majestic")) styleNewT();
+			else if (s.equals("New Majestic Left")) NewMajesticLeft.run(w,s);
+			else if (s.equals("New Majestic Right")) NewMajesticRight.run(w,s);
 			else if (s.equals("New Majestic Special")) styleNewTS();
 			else if (s.equals("Majestic right bi-folding")) styleTR();
 			else if (s.equals("Imperial")) styleTF();
 			else if (s.equals("Imperial right bi-folding")) styleTRF();
 			else if (s.equals("Regent"))   styleQ();
+			else if (s.equals("New Regent (3 hinges)"))   NewRegent3.run(w,s);
+			else if (s.equals("New Regent (4 hinges)"))   NewRegent4.run(w,s);
 			else if (s.equals("Regent (4 hinges)"))   styleQ4();
 			else if (s.equals("Viceroy"))  styleQF();
 			else if (s.equals("Roman"))    styleRoman();

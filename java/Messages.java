@@ -1,8 +1,8 @@
 /*
  * Messages.java
- * Copyright (C) 2009, 2011  Donald G Gray
+ * Copyright (C) 2009, 2011, 2017  Donald G Gray
  *
- * http://gray10.com/
+ * http://glass.gray10.com/
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
