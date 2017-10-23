@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title lang="en-gb">Glass Shutters for Sash Windows</title>
+
+    <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+     <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Italianno">
+
+    <meta content="Donald G Gray" name="author">
+    <meta content="discrete secondary glazing for your historic property" name="description">
+    <style type="text/css">
+      h1 {color: #66132d; font-family: Italianno; font-size: 45px; font-weight: normal; text-align: center;}
+      <!--h2 {color: #66132d; font-family: Perpetua; font-size: 14px; line-height: 0.0; font-weight: normal; text-align: center;}-->
+      h2 {color: #66132d; font-family: Italianno; font-size: 31px; line-height: 0.0; font-weight: normal; text-align: center;}
+      p {line-height: 1.3;}
+      span.body {color: #555555; font-family: Open Sans; font-size: 15px; line-height: 1.3;}
+      a:link {color: #66132d;}
+      a:visited {color: #66132d;}
+      a:active {color: #EE0000;}
+    </style>
+  </head>
+
+  <body>
+    <div id="playlist" style="display: none;">
+    </div>
+    <div id="audio">
+    </div>
+
+    <script type="text/javascript">
+    var text = '{ "songs" : [' +
+    '{ "composer":"J S Bach"    , "song":"Prelude BWV 556"               , "mp3":"JSBach-Prelude-BWV556-v2R.mp3"              } ,' +
+    '{ "composer":"J S Bach"    , "song":"Sheep May Safely Graze"        , "mp3":"SheepMaySafelyGraze.mp3"                    } ,' +
+    '{ "composer":"W A Mozart"  , "song":"Recordare"                     , "mp3":"Recordare.mp3"                              } ,' +
+    '{ "composer":"A Vivaldi"   , "song":"Gloria"                        , "mp3":"Gloria-Vivaldi-v3R.mp3"                     } ,' +
+    '{ "composer":"G F Handel"  , "song":"Zadok the Priest"              , "mp3":"zadok.mp3"                                  } ,' +
+    '{ "composer":"G F Handel"  , "song":"Arrival of the Queen of Sheba" , "mp3":"The Arrival of the Queen of Sheba-Song.mp3" } ,' +
+    '{ "composer":"G F Handel"  , "song":"Messiah 1 Sinfony"             , "mp3":"Messiah 1 Sinfony-Song.mp3"                 } ,' +
+    '{ "composer":"C Petzold"   , "song":"Minuet in G"                   , "mp3":"Minuet in G - Christian Petzold-Song.mp3"   } ,' +
+    '{ "composer":"C Nairne"    , "song":"The Hundred Pipers"            , "mp3":"The Hundred Pipers-Song.mp3"                } ,' +
+    '{ "composer":"S Joplin"    , "song":"The Entertainer"               , "mp3":"The Entertainer.mp3"                        }  ' +
+    ']}';
+    var obj = JSON.parse(text);
+    var table_content = '<table style="background-color: #f4f4f4; border-style: solid; border-width: 8px; border-color: #f4f4f4;" width="402" cellpadding="3"><tbody>';
+    var audio_content = '';
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      table_content += '<tr><td><span class="composer">' + obj.songs[i].composer + '</span></td>';
+      table_content += '<td><span title="Click to play or pause and double-click to rewind." ' +
+                                 'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'class="song" id="song' + i + '">' + obj.songs[i].song + '</span></td></tr>';
+      audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="http://audovia.com/music/' + obj.songs[i].mp3 + '"></audio>';
+    }
+    table_content += '</tbody></table>';
+    document.getElementById("playlist").innerHTML = table_content;
+    document.getElementById("audio").innerHTML = audio_content;
+    var audioArray = new Array();
+    var songArray = new Array();
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      audioArray[i] = document.getElementById("audio" + i);
+      songArray[i] = document.getElementById("song" + i);
+    }
+      function onEnd(song, audio)
+      {
+        song.style.color = '#551A8B';
+        audio.load();
+      }
+      function playPause(song, audio)
+      {
+        for (i = 0; i < songArray.length; i++)
+        {
+          if (song != songArray[i])
+          {
+            if (!audioArray[i].paused)
+            {
+              songArray[i].style.color = 'red';
+              audioArray[i].pause();
+            }
+          }
+        }
+        if (audio.paused)
+        {
+          song.style.color = 'green';
+          audio.play();
+        }
+        else
+        {
+          song.style.color = 'red';
+          audio.pause();
+        }
+      }
+    </script>
+
+    <!--<div style="position: absolute; left: 50%; margin-left: -490px; top: 37px;">
+              <img title="Glass Shutters Icon"
+                alt="Glass Shutters Icon" src="image/iconglass96.png"
+                style="width: 74px; height: 74px; border: 0px solid;">
+    </div>-->
+
+    <h1>Glass Shutters for Sash Windows</h1>
+    <div style="position: relative; top: -14px;">
+    <h2>discrete secondary glazing for your historic property</h2>
+    </div>
+
+
+    <!--<div align="center">
+            <a href="index.html"
+               style="text-decoration:none;"><button type="button" style="background-color:#eeeeee;
+               border-color: #66132d; border-width: 3px;
+               padding:5px; cursor:pointer">
+               <font color="#66132d" face="Verdana"><big><b>Home</b></big></font></button></a>&nbsp;&nbsp;
+            <a href="measuringNT.html"
+               style="text-decoration:none;"><button type="button" style="background-color:#eeeeee; border-width: 3px;
+               padding:5px; cursor:pointer">
+               <font color="#66132d" face="Verdana"><big><b>Measurements</b></big></font></button></a>&nbsp;&nbsp;
+            <a href="tutorial.html"
+               style="text-decoration:none;"><button type="button" style="background-color:#eeeeee; border-width: 3px;
+               padding:5px; cursor:pointer">
+               <font color="#66132d" face="Verdana"><big><b>Drawing</b></big></font></button></a>&nbsp;&nbsp;
+            <a href="mailto:glassshutters@btinternet.com"
+               style="text-decoration:none;"><button type="button" style="background-color:#eeeeee; border-width: 3px;
+               padding:5px; cursor:pointer">
+               <font color="#66132d" face="Verdana"><big><b>Contact Us</b></big></font></button></a>
+    </div>-->
+
+    <div style="width: 980px; position: relative; left: 50%; margin-left: -490px;">
+    <span class="body">
+
+    <div align="center" style="background: linear-gradient(to right, #CC3362, white, white, #CC3362);"> <hr>
+    <a href="index.html" style="text-decoration:none;"><b>Home</b></a>&nbsp;&nbsp;&nbsp;
+    <a href="measuringNT.html" style="text-decoration:none;">Measurements</a>&nbsp;&nbsp;&nbsp;
+    <a href="mailto:info@glass-shutters.com" style="text-decoration:none;">Contact Us</a> <hr>
+    </div>
+
+    <br>
+<div style="height: 400px; overflow-y : auto;">
+<div style="height: 2000px;">
+    <p>
+      Enjoy the luxury of <i><b>Glass Shutters</b></i>, an innovative secondary glazing that preserves
+      the character of your traditional sash windows.&nbsp; As well as maintaining warmth,
+      <i><b>Glass Shutters</b></i> can also reduce condensation.
+    </p>
+    <p>
+      The frameless hinged panels fit within the batten slips and are easily opened to allow access to the window.&nbsp; By choosing an appropriate
+      style, the panel divisions can be made to coincide with the glazing bars.&nbsp;
+      This minimizes the visual impact from inside while making the <i><b>Glass Shutters</b></i> virtually invisible
+      from the outside.
+    </p>
+    <p>
+      To reduce condensation, the cavity between the <i><b>Glass Shutters</b></i> and the original glazing should be
+      vented to the outside.&nbsp; This can be achieved by installing a trickle ventilator in the top rail of the sash
+      window.&nbsp; Provided your room has some ventilation, this will allow cold dry air to enter and filter through the
+      gap between the <i><b>Glass Shutters</b></i> and the window frame.&nbsp; As it does, it will mix with the warm moist air in
+      the room, reducing the moisture content in the vicinity of the window.
+    </p>
+    <p>
+      For safety, the glass panels must be toughened and for maximum warmth, low-emissivity glass should be used.&nbsp;
+      This has an invisible coating on the exterior face which allows radiation from the sun to pass through but reflects heat trying to leave the room.
+    </p>
+    <br>
+    <font color="#66132d"><big>Styles Available</big></font>
+    <br>
+    <br>
+    </span>
+    </div>
+
+    <table width="980px" align="center" border="0" cellpadding="10">
+    <tbody>
+      <tr>
+        <!--<td style="vertical-align: top; width: 20px;"><br>
+        </td>-->
+
+        <td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 20px; height: 77px; border-right: 57px solid white;" onclick="playPause(songArray[0], audioArray[0])" ondblclick="onEnd(songArray[0], audioArray[0])"
+               alt="Glass Shutters for Sash Windows - Standard Shutter" src="image/StandardShutter.png" title="Prelude BWV 556"
+               align="left" hspace="20">
+
+          <i><b>Standard</b>
+          <p style="margin-top: 7px;">
+          single vertical panel hinged on left<br>
+          or right
+          </p></i>
+        </td>
+
+        <!--<td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 20px; height: 77px; border-right: 57px solid white;" onclick="playPause(songArray[1], audioArray[1])" ondblclick="onEnd(songArray[1], audioArray[1])"
+               alt="Glass Shutters for Sash Windows - Sterling Shutter" src="image/SterlingShutter.png" title="Sheep May Safely Graze"
+               align="left" hspace="20">
+
+          <i><b>Sterling</b>
+          <p style="margin-top: 7px;">
+          single vertical panel hinged on left<br>
+          or right with top flap
+          </p></i>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="vertical-align: top;"><br>
+        </td>-->
+
+        <td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 39px; height: 77px; border-right: 38px solid white;" onclick="playPause(songArray[2], audioArray[2])" ondblclick="onEnd(songArray[2], audioArray[2])"
+               alt="Glass Shutters for Sash Windows - Monarch Shutter" src="image/MonarchShutter.png" title="Recordare"
+               align="left" hspace="20">
+          <i><b>Monarch</b>
+          <p style="margin-top: 7px;">
+          double vertical panels
+
+          </p></i>
+        </td>
+
+        <!--<td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 39px; height: 77px; border-right: 38px solid white;" onclick="playPause(songArray[3], audioArray[3])" ondblclick="onEnd(songArray[3], audioArray[3])"
+               alt="Glass Shutters for Sash Windows - Regal Shutter" src="image/RegalShutter.png" title="Gloria"
+               align="left" hspace="20">
+          <i><b>Regal</b>
+          <p style="margin-top: 7px;">
+          double vertical panels with top flap
+          </p></i>
+        </td>-->
+      </tr>
+
+      <tr>
+        <!--<td style="vertical-align: top;"><br>
+        </td>-->
+
+        <td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 58px; height: 77px; border-right: 19px solid white;" onclick="playPause(songArray[4], audioArray[4])" ondblclick="onEnd(songArray[4], audioArray[4])"
+               alt="Glass Shutters for Sash Windows - Majestic Shutter" src="image/MajesticShutter.png" title="Zadok the Priest"
+               align="left" hspace="20">
+          <i><b>Majestic</b>
+          <p style="margin-top: 7px;">
+          triple vertical panels<br>
+          (bi-folding panels on left or right)
+
+
+          </p></i>
+        </td>
+
+        <!--<td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 58px; height: 77px; border-right: 19px solid white;" onclick="playPause(songArray[5], audioArray[5])" ondblclick="onEnd(songArray[5], audioArray[5])"
+               alt="Glass Shutters for Sash Windows - Imperial Shutter" src="image/ImperialShutter.png" title="Arrival of the Queen of Sheba"
+               align="left" hspace="20">
+          <i><b>Imperial</b>
+          <p style="margin-top: 7px;">
+          triple vertical panels with top flap<br>
+          (bi-folding panels on left or right)
+          </p></i>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="vertical-align: top;"><br>
+        </td>-->
+
+        <td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 77px; height: 77px;" onclick="playPause(songArray[6], audioArray[6])" ondblclick="onEnd(songArray[6], audioArray[6])"
+               alt="Glass Shutters for Sash Windows - Regent Shutter" src="image/RegentShutter.png" title="Messiah 1 Sinfony"
+               align="left" hspace="20">
+          <i><b>Regent</b>
+          <p style="margin-top: 7px;">
+          quadruple vertical panels<br>
+          (two sets of bi-folding panels)<br>available with three or four hinges
+
+
+          </p></i>
+        </td>
+
+        <!--<td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 77px; height: 77px;" onclick="playPause(songArray[7], audioArray[7])" ondblclick="onEnd(songArray[7], audioArray[7])"
+               alt="Glass Shutters for Sash Windows - Viceroy Shutter" src="image/ViceroyShutter.png" title="Minuet in G"
+               align="left" hspace="20">
+          <i><b>Viceroy</b>
+          <p style="margin-top: 7px;">
+          quadruple vertical panels with top flap<br>
+          (two sets of bi-folding panels)
+          </p></i>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="vertical-align: top;"><br>
+        </td>
+
+        <td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 39px; height: 95px; border-right: 38px solid white;" onclick="playPause(songArray[8], audioArray[8])" ondblclick="onEnd(songArray[8], audioArray[8])"
+               alt="Roman shutter" src="image/Roman.png" title="The Hundred Pipers"
+               align="left" hspace="20">
+          <i><b>Roman</b>
+          <p style="margin-top: 7px;">
+          double vertical panels with arched<br>
+          top available with three, four or<br>
+          five hinges
+          </p></i>
+        </td>
+
+        <td style="vertical-align: top;color: #333333; font-family: Open Sans; font-size: 13px; line-height: 1.3;">
+          <img style=" width: 40px; height: 89px; border-right: 37px solid white;" onclick="playPause(songArray[9], audioArray[9])" ondblclick="onEnd(songArray[9], audioArray[9])"
+               alt="Roman inset" src="image/Roman%28inset%29.png" title="The Entertainer"
+               align="left" hspace="20">
+          <i><b>Roman (inset)</b>
+          <p style="margin-top: 7px;">
+          double vertical panels with inset arched<br>
+          top available with three, four or five<br>
+          hinges
+          </p></i>
+        </td>-->
+      </tr>
+    </tbody>
+    </table>
+
+    <!--<br>-->
+
+    <div style="width: 980px; position: relative; left: 50%; margin-left: -490px;">
+    <span class="body">
+    <p>
+       Please note that, depending on your location and property type, <i><b>Glass Shutters</b></i> may
+       be subject to Planning Permission.
+    </p>
+    <p>
+       For information on manufacturing, supply and Registered Designs please contact:
+    </p>
+    <p>
+      The Glass Shutter Company Limited<br>
+      6 Edenderry Road<br>
+      Scarva<br>
+      Craigavon<br>
+      County Armagh<br>
+      BT63 6NT<br>
+      Northern Ireland
+    </p>
+
+    <p>
+      Company Registration No.&nbsp; NI606792
+    </p>
+    </span>
+    </div>
+
+    <br>
+
+    <div align="center"><span class="body"><i>Copyright &copy; 2017&nbsp;&nbsp; Donald G Gray</i></span> </div>
+
+    <br>
+</div></div>
+  </body>
+</html>
