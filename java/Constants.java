@@ -1,6 +1,6 @@
 /*
  * Constants.java - constants for Glass Shutters program
- * Copyright (C) 2017, 2018  Donald G Gray
+ * Copyright (C) 2017  Donald G Gray
  *
  * http://glass.gray10.com/
  *
@@ -38,25 +38,22 @@ public class Constants
 
    public static String userHome = System.getProperty("user.home");
 
-   public static String title = "Glass Shutters 3.2.5";
+   public static String title = "Glass Shutters 3.2.1";
 
    public static double endGap = 3.0;
    public static double sideGap = 4.0;
    public static double intGap = 3.0;
 
-   public static double endCentre = 17.0;
-   public static double sideCentre = 17.0;
-   public static double intCentre = 17.0;
+   public static double endCentre = 19.5;
+   public static double sideCentre = 21.0;
+   public static double intCentre = 16.0;
 
-   public static double sideSpace = 32.0;
-   public static double intSpace = 21.0;
+   public static double endCatch = 16.0;
+   public static double sideCatch = 30.0;
 
-   public static double endCatch = 18.0;
-   public static double sideCatch = 20.0;
-
-   public static String extDia   = " d 8";
-   public static String intDia   = " d 8";
-   public static String catchDia = " d 12";
+   public static String extDia   = " d 13";
+   public static String intDia   = " d 13";
+   public static String catchDia = " d 7";
 
    public static String point(double x, double y)
    {

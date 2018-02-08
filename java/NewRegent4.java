@@ -66,9 +66,6 @@ public class NewRegent4
    private static double sideCentre = Constants.sideCentre;
    private static double intCentre  = Constants.intCentre;
 
-   private static double sideSpace = Constants.sideSpace;
-   private static double intSpace  = Constants.intSpace;
-
    private static double endCatch  = Constants.endCatch;
    private static double sideCatch = Constants.sideCatch;
 
@@ -155,49 +152,23 @@ public class NewRegent4
          bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + yoff) + extDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + sideSpace + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(-l2_1 + sideGap + sideCentre + xoff, innerlh1 + yoff) + extDia);
          bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-l2_1 + sideGap + sideCentre + xoff, innerlh1 - sideSpace/2.0 + yoff) + extDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-l2_1 + sideGap + sideCentre + xoff, innerlh1 + sideSpace/2.0 + yoff) + extDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-l2_2 + sideGap + sideCentre + xoff, innerlh2 - sideSpace/2.0 + yoff) + extDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-l2_2 + sideGap + sideCentre + xoff, innerlh2 + sideSpace/2.0 + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(-l2_2 + sideGap + sideCentre + xoff, innerlh2 + yoff) + extDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre + yoff) + extDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre - sideSpace + yoff) + extDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre + xoff, r - endGap - endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre - intSpace + xoff, r - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre + xoff, lh2_1 + yoff) + intDia);
          bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre - intSpace + xoff, lh2_1 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre + xoff, lh2_2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre - intSpace + xoff, lh2_2 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre + xoff, -n + endGap + endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre - intSpace + xoff, -n + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
          // end panel 1
@@ -217,25 +188,12 @@ public class NewRegent4
          bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + xoff, r - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + intSpace + xoff, r - endGap - endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + xoff, lh2_1 + yoff) + intDia);
          bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + intSpace + xoff, lh2_1 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + xoff, lh2_2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + intSpace + xoff, lh2_2 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + xoff, -n + endGap + endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + intSpace + xoff, -n + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(0.0 - intGap/2.0 - sideCatch + xoff, -q + endGap + endCatch + yoff) + catchDia);
@@ -258,25 +216,12 @@ public class NewRegent4
          bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, t - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, t - endGap - endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, rh2_1 + yoff) + intDia);
          bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, rh2_1 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, rh2_2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, rh2_2 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, -o + endGap + endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, -o + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + sideCatch + xoff, -q + endGap + endCatch + yoff) + catchDia);
@@ -299,49 +244,23 @@ public class NewRegent4
          bufferedWriter.write("c " + Constants.point(b - sideGap - sideCentre + xoff, d - endGap - endCentre + yoff) + extDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(b - sideGap - sideCentre + xoff, d - endGap - endCentre - sideSpace + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(m2_2 - sideGap - sideCentre + xoff, innerrh2 + yoff) + extDia);
          bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(m2_2 - sideGap - sideCentre + xoff, innerrh2 + sideSpace/2.0 + yoff) + extDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(m2_2 - sideGap - sideCentre + xoff, innerrh2 - sideSpace/2.0 + yoff) + extDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(m2_1 - sideGap - sideCentre + xoff, innerrh1 + sideSpace/2.0 + yoff) + extDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(m2_1 - sideGap - sideCentre + xoff, innerrh1 - sideSpace/2.0 + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(m2_1 - sideGap - sideCentre + xoff, innerrh1 + yoff) + extDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(h - sideGap - sideCentre + xoff, -f + endGap + endCentre + yoff) + extDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(h - sideGap - sideCentre + xoff, -f + endGap + endCentre + sideSpace + yoff) + extDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, t - endGap - endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, t - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, rh2_1 + yoff) + intDia);
          bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, rh2_1 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, rh2_2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, rh2_2 + yoff) + intDia);
-         bufferedWriter.newLine();
-
          bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, -o + endGap + endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, -o + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
          // end panel 4
