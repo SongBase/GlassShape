@@ -1,6 +1,6 @@
 /*
- * NewMajesticRight.java - Script Generator for Glass Shutters program
- * Copyright (C) 2017  Donald G Gray
+ * NewMonarchBiRight.java - Script Generator for Glass Shutters program
+ * Copyright (C) 2017, 2018  Donald G Gray
  *
  * http://glass.gray10.com/
  *
@@ -23,7 +23,7 @@ import java.io.*;
 import java.awt.*;
 import javax.swing.*;
 
-public class NewMajesticRight
+public class NewMonarchBiRight
 {
    private static double a = 0.0;
    private static double b = 0.0;
@@ -33,17 +33,13 @@ public class NewMajesticRight
    private static double f = 0.0;
    private static double g = 0.0;
    private static double h = 0.0;
-   private static double i = 0.0;
-   private static double j = 0.0;
    private static double lh = 0.0;
+   private static double lh2 = 0.0;
    private static double rh = 0.0;
    private static double l2;
    private static double m2;
-   private static double n;
-   private static double o;
-   private static double r;
-   private static double t;
-   private static double rh2;
+   private static double p;
+   private static double q;
    private static double xoff;
    private static double yoff;
    private static String w;
@@ -72,7 +68,7 @@ public class NewMajesticRight
 	  w = window;
 	  s = style;
 
-      FormStyleT template = new FormStyleT();
+      FormStyleDBR template = new FormStyleDBR();
 	  template.setVisible(true);
 
       a = template.getA();
@@ -83,8 +79,6 @@ public class NewMajesticRight
       f = template.getF();
       g = template.getG();
       h = template.getH();
-      i = template.getI();
-      j = template.getJ();
       lh = template.getLH();
       rh = template.getRH();
 
@@ -93,19 +87,16 @@ public class NewMajesticRight
       l2 = a + (g - a)*(c - lh)/(c + e);
       m2 = b + (h - b)*(d - rh)/(d + f);
 
-      n = e + (f - e)*(g - i)/(g + h);
-      o = f + (e - f)*(h - j)/(h + g);
+      p = c + (d - c)*a/(a + b);
+      q = e + (f - e)*g/(g + h);
 
-      r = c + (d - c)*(a - i)/(a + b);
-      t = d + (c - d)*(b - j)/(b + a);
-
-      rh2 = rh + (lh - rh)*(m2 - j)/(m2 + l2);
+      lh2 = lh + (rh - lh)*l2/(l2 + m2);
 
       JFileChooser chooser = new JFileChooser(new File(new File(new File(System.getProperty("user.home"),"Documents"),"Glass Shutters"),"scr"));
       chooser.setPreferredSize(new Dimension(600,300));
 
-      chooser.setSelectedFile(new File("NewMajesticRight-" + Constants.today + "-" + w + ".scr"));
-      chooser.setDialogTitle("Triple for " + w);
+      chooser.setSelectedFile(new File("NewMonarchBiRight-" + Constants.today + "-" + w + ".scr"));
+      chooser.setDialogTitle("Double for " + w);
 
       int result = chooser.showDialog(null, "Save");
       if (result == JFileChooser.APPROVE_OPTION)
@@ -115,83 +106,66 @@ public class NewMajesticRight
          FileWriter fileWriter = new FileWriter(file);
          BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-         // begin panel 1 (left)
+         // begin panel 1
 
-         xoff = -100.0;
+         xoff = -50.0;
          yoff = 0.0;
 
          Constants.cornerBL(bufferedWriter, -g + sideGap + xoff, -e + endGap + yoff);
          Constants.cornerTL(bufferedWriter, -a + sideGap + xoff, c - endGap + yoff);
-         Constants.cornerTR(bufferedWriter, -i - intGap/2.0 + xoff, r - endGap + yoff);
-         Constants.cornerBR(bufferedWriter, -i - intGap/2.0 + xoff, -n + endGap + yoff);
+         Constants.cornerTR(bufferedWriter, 0.0 - intGap/2.0 + xoff, p - endGap + yoff);
+         Constants.cornerBR(bufferedWriter, 0.0 - intGap/2.0 + xoff, -q + endGap + yoff);
          bufferedWriter.write("l cl");
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + yoff) + extDia);
+         //bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + yoff) + extDia);
+         //bufferedWriter.newLine();
+
+         //bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + sideSpace + yoff) + extDia);
+         //bufferedWriter.newLine();
+
+         //bufferedWriter.write("c " + Constants.point(-l2 + sideGap + sideCentre + xoff, lh + sideSpace/2.0 + yoff) + extDia);
+         //bufferedWriter.newLine();
+
+         //bufferedWriter.write("c " + Constants.point(-l2 + sideGap + sideCentre + xoff, lh - sideSpace/2.0 + yoff) + extDia);
+         //bufferedWriter.newLine();
+
+         //bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre + yoff) + extDia);
+         //bufferedWriter.newLine();
+
+         //bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre - sideSpace + yoff) + extDia);
+         //bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(0.0 - intGap/2.0 - intCentre + xoff, p - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + sideSpace + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(0.0 - intGap/2.0 - intCentre - intSpace + xoff, p - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-l2 + sideGap + sideCentre + xoff, lh + sideSpace/2.0 + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(0.0 - intGap/2.0 - intCentre + xoff, lh2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-l2 + sideGap + sideCentre + xoff, lh - sideSpace/2.0 + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(0.0 - intGap/2.0 - intCentre - intSpace + xoff, lh2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(0.0 - intGap/2.0 - intCentre + xoff, -q + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre - sideSpace + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(0.0 - intGap/2.0 - intCentre - intSpace + xoff, -q + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - sideCatch + xoff, -n + endGap + endCatch + yoff) + catchDia);
+         bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCatch + xoff, -e + endGap + endCatch + yoff) + catchDia);
          bufferedWriter.newLine();
 
          // end panel 1
 
-         // begin panel 2 (centre)
+         // begin panel 2
 
-         xoff = 0.0;
+         xoff = 50.0;
          yoff = 0.0;
 
-         Constants.cornerBL(bufferedWriter, -i + intGap/2.0 + xoff, -n + endGap + yoff);
-         Constants.cornerTL(bufferedWriter, -i + intGap/2.0 + xoff, r - endGap + yoff);
-         Constants.cornerTR(bufferedWriter, j - intGap/2.0 + xoff, t - endGap + yoff);
-         Constants.cornerBR(bufferedWriter, j - intGap/2.0 + xoff, -o + endGap + yoff);
-         bufferedWriter.write("l cl");
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, t - endGap - endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, t - endGap - endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, rh2 + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, rh2 + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, -o + endGap + endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, -o + endGap + endCentre + yoff) + intDia);
-         bufferedWriter.newLine();
-
-         bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + sideCatch + xoff, -n + endGap + endCatch + yoff) + catchDia);
-         bufferedWriter.newLine();
-
-         // end panel 2
-
-         // begin panel 3 (right)
-
-         xoff = 100.0;
-         yoff = 0.0;
-
-         Constants.cornerBL(bufferedWriter, j + intGap/2.0 + xoff, -o + endGap + yoff);
-         Constants.cornerTL(bufferedWriter, j + intGap/2.0 + xoff, t - endGap + yoff);
+         Constants.cornerBL(bufferedWriter, 0.0 + intGap/2.0 + xoff, -q + endGap + yoff);
+         Constants.cornerTL(bufferedWriter, 0.0 + intGap/2.0 + xoff, p - endGap + yoff);
          Constants.cornerTR(bufferedWriter, b - sideGap + xoff, d - endGap + yoff);
          Constants.cornerBR(bufferedWriter, h - sideGap + xoff, -f + endGap + yoff);
          bufferedWriter.write("l cl");
@@ -215,25 +189,28 @@ public class NewMajesticRight
          bufferedWriter.write("c " + Constants.point(h - sideGap - sideCentre + xoff, -f + endGap + endCentre + sideSpace + yoff) + extDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, t - endGap - endCentre + yoff) + intDia);
+         bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + intCentre + xoff, p - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, t - endGap - endCentre + yoff) + intDia);
+         bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + intCentre + intSpace + xoff, p - endGap - endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, rh2 + yoff) + intDia);
+         bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + intCentre + xoff, lh2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, rh2 + yoff) + intDia);
+         bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + intCentre + intSpace + xoff, lh2 + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, -o + endGap + endCentre + yoff) + intDia);
+         bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + intCentre + xoff, -q + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, -o + endGap + endCentre + yoff) + intDia);
+         bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + intCentre + intSpace + xoff, -q + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
-         // end panel 3
+         //bufferedWriter.write("c " + Constants.point(0.0 + intGap/2.0 + sideCatch + xoff, -q + endGap + endCatch + yoff) + catchDia);
+         //bufferedWriter.newLine();
+
+         // end panel 2
 
          // flip
 
@@ -251,7 +228,7 @@ public class NewMajesticRight
          bufferedWriter.newLine();
          bufferedWriter.write("R27");
          bufferedWriter.newLine();
-         bufferedWriter.write(Constants.userHome + "\\Documents\\Glass Shutters\\dwg\\NewMajesticRight-" + Constants.today + "-" + w);
+         bufferedWriter.write(Constants.userHome + "\\Documents\\Glass Shutters\\dwg\\NewMonarchBiRight-" + Constants.today + "-" + w);
          bufferedWriter.newLine();
 
          // end save
@@ -262,7 +239,7 @@ public class NewMajesticRight
 
          // write audit file
 
-         File auditFile = new File(Constants.userHome + "\\Documents\\Glass Shutters\\audit\\NewMajesticRight-" + Constants.today + "-" + w + ".txt");
+         File auditFile = new File(Constants.userHome + "\\Documents\\Glass Shutters\\audit\\NewMonarchBiRight-" + Constants.today + "-" + w + ".txt");
          FileWriter auditFileWriter = new FileWriter(auditFile);
          BufferedWriter auditBufferedWriter = new BufferedWriter(auditFileWriter);
 
@@ -314,15 +291,7 @@ public class NewMajesticRight
 	  auditBufferedWriter.newLine();
 	  auditBufferedWriter.newLine();
 
-	  auditBufferedWriter.write("I (left bar)      " + Double.toString(i));
-	  auditBufferedWriter.newLine();
-	  auditBufferedWriter.newLine();
-
-	  auditBufferedWriter.write("J (right bar)     " + Double.toString(j));
-	  auditBufferedWriter.newLine();
-	  auditBufferedWriter.newLine();
-
-	  auditBufferedWriter.write("LH (left hinge)   " + Double.toString(lh));
+	  auditBufferedWriter.write("LMR (left meeting rail)   " + Double.toString(lh));
 	  auditBufferedWriter.newLine();
 	  auditBufferedWriter.newLine();
 

@@ -1,6 +1,6 @@
 /*
  * GlassShuttersNTR.java - Script Generator for Glass Shutters to NT specifications, all corners rounded.
- * Copyright (C) 2012, 2013, 2014, 2015, 2016, 2017  Donald G Gray
+ * Copyright (C) 2012, 2013, 2014, 2015, 2016, 2017, 2017  Donald G Gray
  *
  * http://glass.gray10.com/
  *
@@ -34,7 +34,7 @@ import javax.swing.plaf.basic.*;
 public class GlassShuttersNTR extends JDialog
 {
 	/*
-	 * version 3.2.1
+	 * version 3.2.5
 	 *
 	 */
 
@@ -107,13 +107,13 @@ public class GlassShuttersNTR extends JDialog
 
    private JDialog frame = GlassShuttersNTR.this;
 
-   private static String title = "Glass Shutters 3.2.1";
+   private static String title = "Glass Shutters 3.2.5";
 
    public GlassShuttersNTR()
    {
 		setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
       setModal(true);
-      setSize(355,260);
+      setSize(450,260);
       setLocation(100,80);
       setTitle(title);
 
@@ -158,7 +158,7 @@ public class GlassShuttersNTR extends JDialog
       JLabel wLabel = new JLabel("Window:");
       wLabel.setBounds(25,50,75,30);
       contentPane.add(wLabel);
-      wField.setBounds(100,50,200,30);
+      wField.setBounds(100,50,290,30);
       contentPane.add(wField);
 
       JLabel sLabel = new JLabel("Style:");
@@ -169,10 +169,13 @@ public class GlassShuttersNTR extends JDialog
 		styleComboBox.addItem("New Standard Left");
 		styleComboBox.addItem("New Standard Right");
 		styleComboBox.addItem("New Monarch");
+		styleComboBox.addItem("New Monarch bi-folding hinged on left");
+		styleComboBox.addItem("New Monarch bi-folding hinged on right");
 		styleComboBox.addItem("New Majestic Left");
 		styleComboBox.addItem("New Majestic Right");
 		styleComboBox.addItem("New Regent (3 hinges)");
 		styleComboBox.addItem("New Regent (4 hinges)");
+		styleComboBox.addItem("New Regent (5 hinges)");
 		styleComboBox.addItem(null);
 		styleComboBox.addItem("Standard hinged left");
 		styleComboBox.addItem("Standard hinged right");
@@ -196,7 +199,7 @@ public class GlassShuttersNTR extends JDialog
 		styleComboBox.addItem("Roman (inset) (5 hinges)");
 		styleComboBox.addItem("Armagh (inset) (4 hinges)");
 
-      styleComboBox.setBounds(100,80,200,30);
+      styleComboBox.setBounds(100,80,290,30);
       contentPane.add(styleComboBox);
 
       JPanel buttonPanel = new JPanel();
@@ -636,7 +639,7 @@ public class GlassShuttersNTR extends JDialog
             aboutFrame.setVisible(true);
 
             output.append("Glass Shutters - Application for creating CAD scripts for drawing \n" +
-                          "Glass Shutters version 3.2.1  Copyright (C) 2012 - 2017  Donald G Gray \n" +
+                          "Glass Shutters version 3.2.5  Copyright (C) 2012 - 2018  Donald G Gray \n" +
                           "\n" +
                           "http://glass.gray10.com/ \n" +
                           "\n" +
@@ -678,7 +681,7 @@ public class GlassShuttersNTR extends JDialog
          console.init();
          console.frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
-         System.out.println("Glass Shutters version 3.2.1");
+         System.out.println("Glass Shutters version 3.2.5");
          System.out.println("Hello " + userName);
 
          File file = new File(System.getProperty("user.home"),"Documents");
@@ -720,6 +723,8 @@ public class GlassShuttersNTR extends JDialog
 			else if (s.equals("Sterling hinged right"))  styleSRF();
 			else if (s.equals("Monarch"))  styleD();
 			else if (s.equals("New Monarch"))  NewMonarch.run(w,s);
+			else if (s.equals("New Monarch bi-folding hinged on left"))  NewMonarchBiLeft.run(w,s);
+			else if (s.equals("New Monarch bi-folding hinged on right"))  NewMonarchBiRight.run(w,s);
 			else if (s.equals("Regal"))    styleDF();
 			else if (s.equals("Majestic")) styleT();
 			//else if (s.equals("New Majestic")) styleNewT();
@@ -732,6 +737,7 @@ public class GlassShuttersNTR extends JDialog
 			else if (s.equals("Regent"))   styleQ();
 			else if (s.equals("New Regent (3 hinges)"))   NewRegent3.run(w,s);
 			else if (s.equals("New Regent (4 hinges)"))   NewRegent4.run(w,s);
+			else if (s.equals("New Regent (5 hinges)"))   NewRegent5.run(w,s);
 			else if (s.equals("Regent (4 hinges)"))   styleQ4();
 			else if (s.equals("Viceroy"))  styleQF();
 			else if (s.equals("Roman"))    styleRoman();

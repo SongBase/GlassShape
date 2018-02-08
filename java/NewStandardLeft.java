@@ -46,6 +46,8 @@ public class NewStandardLeft
    private static double endCentre  = Constants.endCentre;
    private static double sideCentre = Constants.sideCentre;
 
+   private static double sideSpace = Constants.sideSpace;
+
    private static double endCatch  = Constants.endCatch;
    private static double sideCatch = Constants.sideCatch;
 
@@ -103,10 +105,19 @@ public class NewStandardLeft
          bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + yoff) + extDia);
          bufferedWriter.newLine();
 
-         bufferedWriter.write("c " + Constants.point(-l2 + sideGap + sideCentre + xoff, lh + yoff) + extDia);
+         bufferedWriter.write("c " + Constants.point(-g + sideGap + sideCentre + xoff, -e + endGap + endCentre + sideSpace + yoff) + extDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-l2 + sideGap + sideCentre + xoff, lh + sideSpace/2.0+ yoff) + extDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-l2 + sideGap + sideCentre + xoff, lh - sideSpace/2.0 + yoff) + extDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre + yoff) + extDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre - sideSpace + yoff) + extDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(h - sideGap - sideCatch + xoff, -f + endGap + endCatch + yoff) + catchDia);

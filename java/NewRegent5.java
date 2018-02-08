@@ -1,5 +1,5 @@
 /*
- * NewRegent4.java - Script Generator for Glass Shutters program
+ * NewRegent5.java - Script Generator for Glass Shutters program
  * Copyright (C) 2017  Donald G Gray
  *
  * http://glass.gray10.com/
@@ -23,7 +23,7 @@ import java.io.*;
 import java.awt.*;
 import javax.swing.*;
 
-public class NewRegent4
+public class NewRegent5
 {
    private static double a = 0.0;
    private static double b = 0.0;
@@ -37,12 +37,16 @@ public class NewRegent4
    private static double j = 0.0;
    private static double innerlh1 = 0.0;
    private static double innerlh2 = 0.0;
+   private static double innerlh3 = 0.0;
    private static double innerrh1 = 0.0;
    private static double innerrh2 = 0.0;
+   private static double innerrh3 = 0.0;
    private static double l2_1;
    private static double l2_2;
+   private static double l2_3;
    private static double m2_1;
    private static double m2_2;
+   private static double m2_3;
    private static double n;
    private static double o;
    private static double r;
@@ -51,8 +55,10 @@ public class NewRegent4
    private static double q;
    private static double lh2_1;
    private static double lh2_2;
+   private static double lh2_3;
    private static double rh2_1;
    private static double rh2_2;
+   private static double rh2_3;
    private static double xoff;
    private static double yoff;
    private static String w;
@@ -81,7 +87,7 @@ public class NewRegent4
 	  w = window;
 	  s = style;
 
-      FormStyleQ4 template = new FormStyleQ4();
+      FormStyleQ5 template = new FormStyleQ5();
 	  template.setVisible(true);
 
       a = template.getA();
@@ -96,21 +102,25 @@ public class NewRegent4
       j = template.getJ();
       innerlh1 = template.getLH1();
       innerlh2 = template.getLH2();
+      innerlh3 = template.getLH3();
       innerrh1 = template.getRH1();
       innerrh2 = template.getRH2();
+      innerrh3 = template.getRH3();
 
-      if ((innerlh1 > innerlh2) || (innerrh1 > innerrh2))
+      if ((innerlh1 > innerlh2) || (innerlh2 > innerlh3) || (innerrh1 > innerrh2) || (innerrh2 > innerrh3))
       {
-		  Messages.warningMessage(Constants.title, "LH1 - LH2 and RH1 - RH2 must be in ascending order.");
-		  System.exit(0);
+	     Messages.warningMessage(Constants.title, "LH1 - LH3 and RH1 - RH3 must be in ascending order.");
+		 System.exit(0);
 	  }
 
       template.dispose();
 
       l2_1 = a + (g - a)*(c - innerlh1)/(c + e);
       l2_2 = a + (g - a)*(c - innerlh2)/(c + e);
+      l2_3 = a + (g - a)*(c - innerlh3)/(c + e);
       m2_1 = b + (h - b)*(d - innerrh1)/(d + f);
       m2_2 = b + (h - b)*(d - innerrh2)/(d + f);
+      m2_3 = b + (h - b)*(d - innerrh3)/(d + f);
 
       n = e + (f - e)*(g - i)/(g + h);
       o = f + (e - f)*(h - j)/(h + g);
@@ -123,13 +133,15 @@ public class NewRegent4
 
       lh2_1 = innerlh1 + (innerrh1 - innerlh1)*(l2_1 - i)/(l2_1 + m2_1);
       lh2_2 = innerlh2 + (innerrh2 - innerlh2)*(l2_2 - i)/(l2_2 + m2_2);
+      lh2_3 = innerlh3 + (innerrh3 - innerlh3)*(l2_3 - i)/(l2_3 + m2_3);
       rh2_1 = innerrh1 + (innerlh1 - innerrh1)*(m2_1 - j)/(m2_1 + l2_1);
       rh2_2 = innerrh2 + (innerlh2 - innerrh2)*(m2_2 - j)/(m2_2 + l2_2);
+      rh2_3 = innerrh3 + (innerlh3 - innerrh3)*(m2_3 - j)/(m2_3 + l2_3);
 
       JFileChooser chooser = new JFileChooser(new File(new File(new File(System.getProperty("user.home"),"Documents"),"Glass Shutters"),"scr"));
       chooser.setPreferredSize(new Dimension(600,300));
 
-      chooser.setSelectedFile(new File("NewRegent4-" + Constants.today + "-" + w + ".scr"));
+      chooser.setSelectedFile(new File("NewRegent5-" + Constants.today + "-" + w + ".scr"));
       chooser.setDialogTitle("Quad for " + w);
 
       int result = chooser.showDialog(null, "Save");
@@ -170,6 +182,12 @@ public class NewRegent4
          bufferedWriter.write("c " + Constants.point(-l2_2 + sideGap + sideCentre + xoff, innerlh2 + sideSpace/2.0 + yoff) + extDia);
          bufferedWriter.newLine();
 
+         bufferedWriter.write("c " + Constants.point(-l2_3 + sideGap + sideCentre + xoff, innerlh3 - sideSpace/2.0 + yoff) + extDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-l2_3 + sideGap + sideCentre + xoff, innerlh3 + sideSpace/2.0 + yoff) + extDia);
+         bufferedWriter.newLine();
+
          bufferedWriter.write("c " + Constants.point(-a + sideGap + sideCentre + xoff, c - endGap - endCentre + yoff) + extDia);
          bufferedWriter.newLine();
 
@@ -192,6 +210,12 @@ public class NewRegent4
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre - intSpace + xoff, lh2_2 + yoff) + intDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre + xoff, lh2_3 + yoff) + intDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre - intSpace + xoff, lh2_3 + yoff) + intDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(-i - intGap/2.0 - intCentre + xoff, -n + endGap + endCentre + yoff) + intDia);
@@ -230,6 +254,12 @@ public class NewRegent4
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + intSpace + xoff, lh2_2 + yoff) + intDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + xoff, lh2_3 + yoff) + intDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + intSpace + xoff, lh2_3 + yoff) + intDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(-i + intGap/2.0 + intCentre + xoff, -n + endGap + endCentre + yoff) + intDia);
@@ -273,6 +303,12 @@ public class NewRegent4
          bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, rh2_2 + yoff) + intDia);
          bufferedWriter.newLine();
 
+         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, rh2_3 + yoff) + intDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre - intSpace + xoff, rh2_3 + yoff) + intDia);
+         bufferedWriter.newLine();
+
          bufferedWriter.write("c " + Constants.point(j - intGap/2.0 - intCentre + xoff, -o + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
@@ -300,6 +336,12 @@ public class NewRegent4
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(b - sideGap - sideCentre + xoff, d - endGap - endCentre - sideSpace + yoff) + extDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(m2_3 - sideGap - sideCentre + xoff, innerrh3 + sideSpace/2.0 + yoff) + extDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(m2_3 - sideGap - sideCentre + xoff, innerrh3 - sideSpace/2.0 + yoff) + extDia);
          bufferedWriter.newLine();
 
          bufferedWriter.write("c " + Constants.point(m2_2 - sideGap - sideCentre + xoff, innerrh2 + sideSpace/2.0 + yoff) + extDia);
@@ -338,6 +380,12 @@ public class NewRegent4
          bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, rh2_2 + yoff) + intDia);
          bufferedWriter.newLine();
 
+         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, rh2_3 + yoff) + intDia);
+         bufferedWriter.newLine();
+
+         bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + intSpace + xoff, rh2_3 + yoff) + intDia);
+         bufferedWriter.newLine();
+
          bufferedWriter.write("c " + Constants.point(j + intGap/2.0 + intCentre + xoff, -o + endGap + endCentre + yoff) + intDia);
          bufferedWriter.newLine();
 
@@ -362,7 +410,7 @@ public class NewRegent4
          bufferedWriter.newLine();
          bufferedWriter.write("R27");
          bufferedWriter.newLine();
-         bufferedWriter.write(Constants.userHome + "\\Documents\\Glass Shutters\\dwg\\NewRegent4-" + Constants.today + "-" + w);
+         bufferedWriter.write(Constants.userHome + "\\Documents\\Glass Shutters\\dwg\\NewRegent5-" + Constants.today + "-" + w);
          bufferedWriter.newLine();
 
          // end save
@@ -373,7 +421,7 @@ public class NewRegent4
 
          // write audit file
 
-         File auditFile = new File(Constants.userHome + "\\Documents\\Glass Shutters\\audit\\NewRegent4-" + Constants.today + "-" + w + ".txt");
+         File auditFile = new File(Constants.userHome + "\\Documents\\Glass Shutters\\audit\\NewRegent5-" + Constants.today + "-" + w + ".txt");
          FileWriter auditFileWriter = new FileWriter(auditFile);
          BufferedWriter auditBufferedWriter = new BufferedWriter(auditFileWriter);
 
@@ -441,11 +489,19 @@ public class NewRegent4
 	  auditBufferedWriter.newLine();
 	  auditBufferedWriter.newLine();
 
+	  auditBufferedWriter.write("LH3               " + Double.toString(innerlh3));
+	  auditBufferedWriter.newLine();
+	  auditBufferedWriter.newLine();
+
 	  auditBufferedWriter.write("RH1               " + Double.toString(innerrh1));
 	  auditBufferedWriter.newLine();
 	  auditBufferedWriter.newLine();
 
 	  auditBufferedWriter.write("RH2               " + Double.toString(innerrh2));
+	  auditBufferedWriter.newLine();
+	  auditBufferedWriter.newLine();
+
+	  auditBufferedWriter.write("RH3               " + Double.toString(innerrh3));
 	  auditBufferedWriter.newLine();
 	  auditBufferedWriter.newLine();
 
