@@ -56,7 +56,7 @@
                                  'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
                                  'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
                                  'class="song" id="song' + i + '">' + obj.songs[i].song + '</span></td></tr>';
-      audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="http://audovia.com/music/' + obj.songs[i].mp3 + '"></audio>';
+      audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="../music/' + obj.songs[i].mp3 + '"></audio>';
     }
     table_content += '</tbody></table>';
     document.getElementById("playlist").innerHTML = table_content;
