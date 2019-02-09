@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.2" baseProfile="tiny" width="210mm" height="297mm" viewBox="0 0 21000 29700" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+ <g visibility="visible" id="MasterSlide_1_Default">
+  <desc>Master slide
+  </desc>
+  <rect fill="none" stroke="none" x="0" y="0" width="21000" height="29700"/>
+ </g>
+ <g visibility="visible" id="Slide_1_page1">
+  <g>
+   <defs>
+    <linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="1998" y1="3000" x2="2502" y2="3000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_1)" stroke="rgb(128,128,128)" id="Drawing_1_0" stroke-linejoin="round" d="M 2250,4000 L 2000,4000 2000,2000 2500,2000 2500,4000 2250,4000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_2" gradientUnits="userSpaceOnUse" x1="1938" y1="5940" x2="2422" y2="5940">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_2)" stroke="rgb(128,128,128)" id="Drawing_2_0" stroke-linejoin="round" d="M 2180,6940 L 1940,6940 1940,4940 2420,4940 2420,6940 2180,6940 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_3" gradientUnits="userSpaceOnUse" x1="2942" y1="5940" x2="2458" y2="5940">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_3)" stroke="rgb(128,128,128)" id="Drawing_3_0" stroke-linejoin="round" d="M 2700,6940 L 2460,6940 2460,4940 2940,4940 2940,6940 2700,6940 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_4" gradientUnits="userSpaceOnUse" x1="2502" y1="9000" x2="1998" y2="9000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_4)" stroke="rgb(128,128,128)" id="Drawing_4_0" stroke-linejoin="round" d="M 2250,10000 L 2000,10000 2000,8000 2500,8000 2500,10000 2250,10000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_5" gradientUnits="userSpaceOnUse" x1="2498" y1="9000" x2="2982" y2="9000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_5)" stroke="rgb(128,128,128)" id="Drawing_5_0" stroke-linejoin="round" d="M 2740,10000 L 2500,10000 2500,8000 2980,8000 2980,10000 2740,10000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_6" gradientUnits="userSpaceOnUse" x1="3502" y1="9000" x2="3018" y2="9000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_6)" stroke="rgb(128,128,128)" id="Drawing_6_0" stroke-linejoin="round" d="M 3260,10000 L 3020,10000 3020,8000 3500,8000 3500,10000 3260,10000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_7" gradientUnits="userSpaceOnUse" x1="4750" y1="8000" x2="4750" y2="8480">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_7)" stroke="rgb(128,128,128)" id="Drawing_7_0" stroke-linejoin="round" d="M 4750,8480 L 4000,8480 4000,8000 5500,8000 5500,8480 4750,8480 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_8" gradientUnits="userSpaceOnUse" x1="4501" y1="9260" x2="3999" y2="9260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_8)" stroke="rgb(128,128,128)" id="Drawing_8_0" stroke-linejoin="round" d="M 4250,10000 L 4000,10000 4000,8520 4500,8520 4500,10000 4250,10000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_9" gradientUnits="userSpaceOnUse" x1="4499" y1="9260" x2="4981" y2="9260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_9)" stroke="rgb(128,128,128)" id="Drawing_9_0" stroke-linejoin="round" d="M 4740,10000 L 4500,10000 4500,8520 4980,8520 4980,10000 4740,10000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_10" gradientUnits="userSpaceOnUse" x1="5501" y1="9260" x2="5019" y2="9260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_10)" stroke="rgb(128,128,128)" id="Drawing_10_0" stroke-linejoin="round" d="M 5260,10000 L 5020,10000 5020,8520 5500,8520 5500,10000 5260,10000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_11" gradientUnits="userSpaceOnUse" x1="4500" y1="5000" x2="4500" y2="5480">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_11)" stroke="rgb(128,128,128)" id="Drawing_11_0" stroke-linejoin="round" d="M 4500,5480 L 4000,5480 4000,5000 5000,5000 5000,5480 4500,5480 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_12" gradientUnits="userSpaceOnUse" x1="3999" y1="6260" x2="4481" y2="6260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_12)" stroke="rgb(128,128,128)" id="Drawing_12_0" stroke-linejoin="round" d="M 4240,7000 L 4000,7000 4000,5520 4480,5520 4480,7000 4240,7000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_13" gradientUnits="userSpaceOnUse" x1="5001" y1="6260" x2="4519" y2="6260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_13)" stroke="rgb(128,128,128)" id="Drawing_13_0" stroke-linejoin="round" d="M 4760,7000 L 4520,7000 4520,5520 5000,5520 5000,7000 4760,7000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_14" gradientUnits="userSpaceOnUse" x1="3750" y1="2000" x2="3750" y2="2480">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_14)" stroke="rgb(128,128,128)" id="Drawing_14_0" stroke-linejoin="round" d="M 3750,2480 L 3500,2480 3500,2000 4000,2000 4000,2480 3750,2480 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_15" gradientUnits="userSpaceOnUse" x1="3499" y1="3260" x2="4001" y2="3260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_15)" stroke="rgb(128,128,128)" id="Drawing_15_0" stroke-linejoin="round" d="M 3750,4000 L 3500,4000 3500,2520 4000,2520 4000,4000 3750,4000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_16" gradientUnits="userSpaceOnUse" x1="2502" y1="12000" x2="1998" y2="12000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_16)" stroke="rgb(128,128,128)" id="Drawing_16_0" stroke-linejoin="round" d="M 2250,13000 L 2000,13000 2000,11000 2500,11000 2500,13000 2250,13000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_17" gradientUnits="userSpaceOnUse" x1="2498" y1="12000" x2="2982" y2="12000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_17)" stroke="rgb(128,128,128)" id="Drawing_17_0" stroke-linejoin="round" d="M 2740,13000 L 2500,13000 2500,11000 2980,11000 2980,13000 2740,13000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_18" gradientUnits="userSpaceOnUse" x1="3502" y1="12000" x2="3018" y2="12000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_18)" stroke="rgb(128,128,128)" id="Drawing_18_0" stroke-linejoin="round" d="M 3260,13000 L 3020,13000 3020,11000 3500,11000 3500,13000 3260,13000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_19" gradientUnits="userSpaceOnUse" x1="3498" y1="12000" x2="4002" y2="12000">
+     <stop offset="0" stop-color="rgb(206,178,139)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_19)" stroke="rgb(128,128,128)" id="Drawing_19_0" stroke-linejoin="round" d="M 3750,13000 L 3500,13000 3500,11000 4000,11000 4000,13000 3750,13000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_20" gradientUnits="userSpaceOnUse" x1="5500" y1="11000" x2="5500" y2="11480">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_20)" stroke="rgb(128,128,128)" id="Drawing_20_0" stroke-linejoin="round" d="M 5500,11480 L 4500,11480 4500,11000 6500,11000 6500,11480 5500,11480 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_21" gradientUnits="userSpaceOnUse" x1="5001" y1="12260" x2="4499" y2="12260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_21)" stroke="rgb(128,128,128)" id="Drawing_21_0" stroke-linejoin="round" d="M 4750,13000 L 4500,13000 4500,11520 5000,11520 5000,13000 4750,13000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_22" gradientUnits="userSpaceOnUse" x1="4999" y1="12260" x2="5481" y2="12260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_22)" stroke="rgb(128,128,128)" id="Drawing_22_0" stroke-linejoin="round" d="M 5240,13000 L 5000,13000 5000,11520 5480,11520 5480,13000 5240,13000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_23" gradientUnits="userSpaceOnUse" x1="6001" y1="12260" x2="5519" y2="12260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_23)" stroke="rgb(128,128,128)" id="Drawing_23_0" stroke-linejoin="round" d="M 5760,13000 L 5520,13000 5520,11520 6000,11520 6000,13000 5760,13000 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_24" gradientUnits="userSpaceOnUse" x1="5999" y1="12260" x2="6501" y2="12260">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_24)" stroke="rgb(128,128,128)" id="Drawing_24_0" stroke-linejoin="round" d="M 6250,13000 L 6000,13000 6000,11520 6500,11520 6500,13000 6250,13000 Z"/>
+  </g>
+  <g>
+   <path fill="none" stroke="rgb(128,128,128)" id="Drawing_25_0" stroke-linejoin="round" d="M 2500,8000 L 2500,10000"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_25" gradientUnits="userSpaceOnUse" x1="8068" y1="5760" x2="8552" y2="5760">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_25)" stroke="rgb(128,128,128)" id="Drawing_26_0" stroke-linejoin="round" d="M 8070,6999 L 8070,5000 8070,4999 8070,4999 8071,4975 8073,4950 8076,4925 8081,4901 8087,4876 8094,4852 8102,4829 8112,4805 8123,4783 8135,4761 8148,4740 8162,4719 8178,4699 8194,4680 8211,4662 8230,4645 8249,4628 8269,4613 8289,4599 8311,4586 8333,4574 8355,4563 8378,4554 8402,4545 8426,4538 8450,4532 8475,4528 8500,4525 8525,4523 8550,4522 8550,4999 8550,5002 8550,6999 8070,6999 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_26" gradientUnits="userSpaceOnUse" x1="9072" y1="5759" x2="8588" y2="5759">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_26)" stroke="rgb(128,128,128)" id="Drawing_27_0" stroke-linejoin="round" d="M 8590,6999 L 8590,4999 8591,4999 8591,4520 8615,4521 8640,4522 8664,4526 8688,4530 8712,4535 8735,4542 8758,4550 8781,4559 8803,4569 8824,4581 8845,4593 8866,4607 8885,4621 8904,4636 8922,4653 8939,4670 8956,4688 8971,4707 8985,4727 8999,4747 9011,4768 9022,4790 9032,4812 9041,4835 9049,4858 9055,4881 9061,4905 9065,4929 9068,4953 9070,4978 9070,4999 9070,5002 9070,6999 8590,6999 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_27" gradientUnits="userSpaceOnUse" x1="10308" y1="5760" x2="10792" y2="5760">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_27)" stroke="rgb(128,128,128)" id="Drawing_28_0" stroke-linejoin="round" d="M 10310,6999 L 10310,5000 10310,4999 10310,4999 10311,4975 10313,4950 10316,4925 10321,4901 10327,4876 10334,4852 10342,4829 10352,4805 10363,4783 10375,4761 10388,4740 10402,4719 10418,4699 10434,4680 10451,4662 10470,4645 10489,4628 10509,4613 10529,4599 10551,4586 10573,4574 10595,4563 10618,4554 10642,4545 10666,4538 10690,4532 10715,4528 10740,4525 10765,4523 10790,4522 10790,4999 10790,5002 10790,6999 10310,6999 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_28" gradientUnits="userSpaceOnUse" x1="11312" y1="5759" x2="10828" y2="5759">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_28)" stroke="rgb(128,128,128)" id="Drawing_29_0" stroke-linejoin="round" d="M 10830,6999 L 10830,4999 10831,4999 10831,4520 10855,4521 10880,4522 10904,4526 10928,4530 10952,4535 10975,4542 10998,4550 11021,4559 11043,4569 11064,4581 11085,4593 11106,4607 11125,4621 11144,4636 11162,4653 11179,4670 11196,4688 11211,4707 11225,4727 11239,4747 11251,4768 11262,4790 11272,4812 11281,4835 11289,4858 11295,4881 11301,4905 11305,4929 11308,4953 11310,4978 11310,4999 11310,5002 11310,6999 10830,6999 Z"/>
+  </g>
+  <g>
+   <path fill="rgb(207,231,245)" stroke="none" d="M 8955,8010 L 8880,8010 8880,7860 9030,7860 9030,8010 8955,8010 Z"/>
+   <path fill="none" stroke="rgb(128,128,128)" id="Drawing_30_0" stroke-linejoin="round" d="M 8955,8010 L 8880,8010 8880,7860 9030,7860 9030,8010 8955,8010 Z"/>
+  </g>
+  <g>
+   <path fill="rgb(207,231,245)" stroke="none" d="M 7505,8390 L 7280,8390 7280,7940 7730,7940 7730,8390 7505,8390 Z"/>
+   <path fill="none" stroke="rgb(128,128,128)" id="Drawing_31_0" stroke-linejoin="round" d="M 7505,8390 L 7280,8390 7280,7940 7730,7940 7730,8390 7505,8390 Z"/>
+  </g>
+  <g>
+   <path fill="rgb(207,231,245)" stroke="none" d="M 9920,8390 L 9460,8390 9460,8230 10380,8230 10380,8390 9920,8390 Z"/>
+   <path fill="none" stroke="rgb(128,128,128)" id="Drawing_32_0" stroke-linejoin="round" d="M 9920,8390 L 9460,8390 9460,8230 10380,8230 10380,8390 9920,8390 Z"/>
+  </g>
+  <g>
+   <path fill="rgb(255,255,255)" stroke="none" d="M 10805,5110 L 10310,5110 10310,5070 11300,5070 11300,5110 10805,5110 Z"/>
+   <path fill="none" stroke="rgb(128,128,128)" id="Drawing_33_0" stroke-linejoin="round" d="M 10805,5110 L 10310,5110 10310,5070 11300,5070 11300,5110 10805,5110 Z"/>
+  </g>
+  <g>
+   <path fill="none" stroke="rgb(255,255,255)" id="Drawing_34_0" stroke-width="20" stroke-linejoin="round" d="M 11310,5070 L 11310,5100"/>
+  </g>
+  <g>
+   <path fill="none" stroke="rgb(255,255,255)" id="Drawing_35_0" stroke-width="10" stroke-linejoin="round" d="M 10310,5070 L 10310,5100"/>
+  </g>
+  <g>
+   <path fill="none" stroke="rgb(255,255,255)" id="Drawing_36_0" stroke-width="10" stroke-linejoin="round" d="M 10800,5070 L 10830,5070"/>
+  </g>
+  <g>
+   <path fill="none" stroke="rgb(255,255,255)" id="Drawing_37_0" stroke-width="10" stroke-linejoin="round" d="M 10790,5110 L 10830,5110"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_29" gradientUnits="userSpaceOnUse" x1="12908" y1="5760" x2="13392" y2="5760">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_29)" stroke="rgb(128,128,128)" id="Drawing_38_0" stroke-linejoin="round" d="M 12910,6999 L 12910,5000 12910,4999 12910,4999 12911,4975 12913,4950 12916,4925 12921,4901 12927,4876 12934,4852 12942,4829 12952,4805 12963,4783 12975,4761 12988,4740 13002,4719 13018,4699 13034,4680 13051,4662 13070,4645 13089,4628 13109,4613 13129,4599 13151,4586 13173,4574 13195,4563 13218,4554 13242,4545 13266,4538 13290,4532 13315,4528 13340,4525 13365,4523 13390,4522 13390,4999 13390,5002 13390,6999 12910,6999 Z"/>
+  </g>
+  <g>
+   <defs>
+    <linearGradient id="Gradient_30" gradientUnits="userSpaceOnUse" x1="13912" y1="5759" x2="13428" y2="5759">
+     <stop offset="0" stop-color="rgb(160,170,179)"/>
+     <stop offset="1" stop-color="rgb(255,255,255)"/>
+    </linearGradient>
+   </defs>
+   <path fill="url(#Gradient_30)" stroke="rgb(128,128,128)" id="Drawing_39_0" stroke-linejoin="round" d="M 13430,6999 L 13430,4999 13431,4999 13431,4520 13455,4521 13480,4522 13504,4526 13528,4530 13552,4535 13575,4542 13598,4550 13621,4559 13643,4569 13664,4581 13685,4593 13706,4607 13725,4621 13744,4636 13762,4653 13779,4670 13796,4688 13811,4707 13825,4727 13839,4747 13851,4768 13862,4790 13872,4812 13881,4835 13889,4858 13895,4881 13901,4905 13905,4929 13908,4953 13910,4978 13910,4999 13910,5002 13910,6999 13430,6999 Z"/>
+  </g>
+  <g>
+   <rect fill="none" stroke="none" x="13080" y="4730" width="306" height="306"/>
+   <path fill="none" stroke="rgb(128,128,128)" id="Drawing_40_0" stroke-linejoin="round" d="M 13080,5035 L 13080,5019 13082,5003 13084,4987 13087,4972 13090,4956 13095,4941 13100,4926 13106,4911 13113,4897 13121,4882 13129,4869 13138,4856 13148,4843 13158,4831 13169,4819 13181,4808 13193,4798 13206,4788 13219,4779 13233,4771 13247,4763 13261,4756 13276,4750 13291,4745 13306,4740 13322,4737 13337,4734 13353,4732 13369,4730 13385,4730 13385,5035 13080,5035 Z"/>
+   <rect fill="none" stroke="none" x="13080" y="4730" width="611" height="611"/>
+  </g>
+  <g>
+   <rect fill="none" stroke="none" x="13430" y="4730" width="321" height="311"/>
+   <path fill="none" stroke="rgb(128,128,128)" id="Drawing_41_0" stroke-linejoin="round" d="M 13431,4730 L 13447,4730 13463,4731 13479,4732 13494,4735 13510,4738 13525,4742 13540,4747 13555,4752 13570,4759 13584,4766 13598,4773 13612,4782 13625,4791 13637,4801 13649,4811 13661,4822 13671,4834 13682,4846 13691,4859 13700,4872 13709,4885 13716,4899 13723,4914 13729,4928 13735,4943 13739,4958 13743,4974 13746,4990 13748,5005 13749,5021 13750,5037 13440,5040 13431,4730 Z"/>
+   <rect fill="none" stroke="none" x="13130" y="4730" width="621" height="621"/>
+  </g>
+ </g>
+</svg>
