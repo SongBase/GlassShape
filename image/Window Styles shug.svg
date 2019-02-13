@@ -68,7 +68,7 @@
          </defs>
          <path style="fill:url(#gradient1)" d="M 2250,4000 L 2000,4000 2000,2000 2500,2000 2500,4000 2250,4000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 2250,4000 L 2000,4000 2000,2000 2500,2000 2500,4000 2250,4000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 2250,4000 L 2000,4000 2000,2000 2500,2000 2500,4000 2250,4000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -83,7 +83,7 @@
          </defs>
          <path style="fill:url(#gradient2)" d="M 2180,6940 L 1940,6940 1940,4940 2420,4940 2420,6940 2180,6940 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 2180,6940 L 1940,6940 1940,4940 2420,4940 2420,6940 2180,6940 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 2180,6940 L 1940,6940 1940,4940 2420,4940 2420,6940 2180,6940 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -98,7 +98,7 @@
          </defs>
          <path style="fill:url(#gradient3)" d="M 2700,6940 L 2460,6940 2460,4940 2940,4940 2940,6940 2700,6940 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 2700,6940 L 2460,6940 2460,4940 2940,4940 2940,6940 2700,6940 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 2700,6940 L 2460,6940 2460,4940 2940,4940 2940,6940 2700,6940 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -113,7 +113,7 @@
          </defs>
          <path style="fill:url(#gradient4)" d="M 2250,10000 L 2000,10000 2000,8000 2500,8000 2500,10000 2250,10000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 2250,10000 L 2000,10000 2000,8000 2500,8000 2500,10000 2250,10000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 2250,10000 L 2000,10000 2000,8000 2500,8000 2500,10000 2250,10000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -128,7 +128,7 @@
          </defs>
          <path style="fill:url(#gradient5)" d="M 2740,10000 L 2500,10000 2500,8000 2980,8000 2980,10000 2740,10000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 2740,10000 L 2500,10000 2500,8000 2980,8000 2980,10000 2740,10000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 2740,10000 L 2500,10000 2500,8000 2980,8000 2980,10000 2740,10000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -143,7 +143,7 @@
          </defs>
          <path style="fill:url(#gradient6)" d="M 3260,10000 L 3020,10000 3020,8000 3500,8000 3500,10000 3260,10000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 3260,10000 L 3020,10000 3020,8000 3500,8000 3500,10000 3260,10000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 3260,10000 L 3020,10000 3020,8000 3500,8000 3500,10000 3260,10000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -293,7 +293,7 @@
          </defs>
          <path style="fill:url(#gradient16)" d="M 2250,13000 L 2000,13000 2000,11000 2500,11000 2500,13000 2250,13000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 2250,13000 L 2000,13000 2000,11000 2500,11000 2500,13000 2250,13000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 2250,13000 L 2000,13000 2000,11000 2500,11000 2500,13000 2250,13000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -308,7 +308,7 @@
          </defs>
          <path style="fill:url(#gradient17)" d="M 2740,13000 L 2500,13000 2500,11000 2980,11000 2980,13000 2740,13000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 2740,13000 L 2500,13000 2500,11000 2980,11000 2980,13000 2740,13000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 2740,13000 L 2500,13000 2500,11000 2980,11000 2980,13000 2740,13000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -323,7 +323,7 @@
          </defs>
          <path style="fill:url(#gradient18)" d="M 3260,13000 L 3020,13000 3020,11000 3500,11000 3500,13000 3260,13000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 3260,13000 L 3020,13000 3020,11000 3500,11000 3500,13000 3260,13000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 3260,13000 L 3020,13000 3020,11000 3500,11000 3500,13000 3260,13000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
@@ -338,7 +338,7 @@
          </defs>
          <path style="fill:url(#gradient19)" d="M 3750,13000 L 3500,13000 3500,11000 4000,11000 4000,13000 3750,13000 Z"/>
         </g>
-        <path fill="none" stroke="rgb(128,128,128)" d="M 3750,13000 L 3500,13000 3500,11000 4000,11000 4000,13000 3750,13000 Z"/>
+        <path fill="none" stroke="rgb(51,51,51)" d="M 3750,13000 L 3500,13000 3500,11000 4000,11000 4000,13000 3750,13000 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.RectangleShape">
